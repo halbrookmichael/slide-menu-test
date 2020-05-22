@@ -8,6 +8,7 @@ $(document).ready(function () {
       $('#sidebar').removeClass('active');
       // hide overlay
       $('.overlay').removeClass('active');
+      $('body').removeClass('fixed');
   });
 
   $('#sidebarCollapse').on('click', function () {
