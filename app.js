@@ -3,7 +3,7 @@ $(document).ready(function () {
       theme: "minimal"
   });
 
-  $('#dismiss, .overlay').on('click', function () {
+  $('.dismiss, .overlay').on('click', function () {
       // hide sidebar
       $('#sidebar').removeClass('active');
       // hide overlay
@@ -21,7 +21,13 @@ $(document).ready(function () {
   });
 
   // When link is clicked update the Html with new content
-  $('.content').on('click', function () {
+  $('.page-submenu').on('click', function () {
       // update the content
-  })
+      $('#secondary-nav').addClass('active');
+  });
+  $('.dismiss-secondary').on('click', function () {
+    // hide sidebar
+    $('#secondary-nav').removeClass('active');
+  });
+
 });

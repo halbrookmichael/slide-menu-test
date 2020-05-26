@@ -18,7 +18,7 @@
 			<!-- Sidebar  -->
 			<nav id="sidebar" class="d-flex justify-items-center">
 				<div class="head d-flex flex-column justify-items-center">
-					<div class="dismiss">
+					<div id="dismiss">
 						<i class="fas fa-arrow-left"></i>
 					</div>
 					<div class="sidebar-header rec-container-base rec-container-base__header">
@@ -33,64 +33,30 @@
 					<li class="rec-container-base rec-container-base__link">
 						<img src="https://placekeanu.com/60/60" alt="">
 						<a href="#">Search By Gun</a>
+					</li>inner-
+					<li class="rec-container-base rec-container-base__link">
+						<img src="https://placekeanu.com/60/60" alt="">
+						<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Shop Now</a>
+						<li class="subMenu">
+							<ul class="collapse list-unstyled" id="pageSubmenu">
+								<li class="rec-container-base rec-container-base__inner-link">
+									<img src="https://placekeanu.com/60/60" alt="">
+									<a href="#">Page 1</a>
+								</li>
+								<li class="rec-container-base rec-container-base__inner-link">
+									<img src="https://placekeanu.com/60/60" alt="">
+									<a href="#">Page 2</a>
+								</li>
+								<li class="rec-container-base rec-container-base__inner-link">
+									<img src="https://placekeanu.com/60/60" alt="">
+									<a href="#">Page 3</a>
+								</li>
+							</ul>
+						</li>
 					</li>
 					<li class="rec-container-base rec-container-base__link">
 						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#" class="page-submenu"">Shop Now</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#" class="content">Reviews</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Blog</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Videos</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Help</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Contact Us</a>
-					</li>
-				</ul>
-				<ul class="list-unstyled CTAs">
-					<li>
-						<a href="#" class="download">I'm a button!</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- Sidebar  -->
-			<nav id="secondary-nav" class="d-flex justify-items-center align-items-center">
-				<div class="head d-flex flex-column justify-items-center">
-					<div class="dismiss-secondary">
-						<i class="fas fa-arrow-left"></i>
-					</div>
-					<div class="sidebar-header rec-container-base rec-container-base__header">
-						<h3>Alien Gear Holsters Two</h3>
-					</div>
-				</div>
-				<ul class="list-unstyled components">
-					<li class="active rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Home</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Search By Gun</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#pageSubmenu">Shop Now</a>
-					</li>
-					<li class="rec-container-base rec-container-base__link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#" class="content">Reviews</a>
+						<a href="#">Reviews</a>
 					</li>
 					<li class="rec-container-base rec-container-base__link">
 						<img src="https://placekeanu.com/60/60" alt="">
@@ -109,6 +75,7 @@
 						<a href="#">Contact Us</a>
 					</li>
 				</ul>
+
 				<ul class="list-unstyled CTAs">
 					<li>
 						<a href="#" class="download">I'm a button!</a>
@@ -122,45 +89,36 @@
 					<div class="container-fluid">
 						<button type="button" id="sidebarCollapse" class="btn btn-info">
 							<i class="fas fa-align-justify"></i>
+							<!-- <span>Toggle Sidebar</span> -->
 						</button>
+						<!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fas fa-align-justify"></i>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="nav navbar-nav ml-auto">
+								<li class="nav-item active">
+										<a class="nav-link" href="#">Page</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="#">Page</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="#">Page</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="#">Page</a>
+								</li>
+							</ul>
+						</div> -->
 					</div>
 				</nav>
 
-				<h2>Collapsible Sidebar Using Bootstrap 4</h2>
+				<h2>Reviews</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<div class="line"></div>
-
-				<h2>Lorem Ipsum Dolor</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<div class="line"></div>
-
-				<h2>Lorem Ipsum Dolor</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<div class="line"></div>
-
-				<h3>Lorem Ipsum Dolor</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 		</div>
-
-		<!-- <ul class="collapse list-unstyled" id="pageSubmenu">
-					<li class="rec-container-base rec-container-base__inner-link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Page 1</a>
-					</li>
-					<li class="rec-container-base rec-container-base__inner-link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Page 2</a>
-					</li>
-					<li class="rec-container-base rec-container-base__inner-link">
-						<img src="https://placekeanu.com/60/60" alt="">
-						<a href="#">Page 3</a>
-					</li>
-				</ul> -->
 
 		<div class="overlay"></div>
 		<!-- Jquery -->
