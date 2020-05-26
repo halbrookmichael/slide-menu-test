@@ -19,4 +19,9 @@ $(document).ready(function () {
       $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       $('body').addClass('fixed');
   });
+
+  // When link is clicked update the Html with new content
+  $('.content').on('click', function () {
+      // update the content
+  })
 });
