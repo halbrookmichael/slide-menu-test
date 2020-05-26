@@ -102,9 +102,11 @@ a:focus {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.dismiss.secondary {
+.dismiss-secondary {
 	text-align: start;
 	align-self: flex-start;
+	margin-right: 0;
+	margin-bottom: 5px;
 }
 
 /* overlay */
@@ -214,7 +216,7 @@ a.article:hover {
 	left: 320px;
 	width: 0;
 	height: 100vh;
-	top: 0;
+	top: 5px;
 	z-index: 999;
 	background: #fff;
 	color: #000;
