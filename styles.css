@@ -45,7 +45,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	width: 280px;
-	background-color: #ccc;
+	background-color: #34d128;
 	padding: 10px;
 	margin-bottom: 20px;
 	border-radius: 5px;
@@ -74,7 +74,10 @@ a:focus {
 	margin-top: 20px;
 }
 .sidebar-header h3{
-	
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	margin: 0;
 }
 .rec-container-base__header {
 	height: 50px;
@@ -118,8 +121,7 @@ a:focus {
 
 /* sidebar links */
 #sidebar ul.components {
-	/* padding: 50px 0 30px; */
-	border-bottom: 1px solid #47748b;
+	border-bottom: 1px solid #34d128;
 }
 #sidebar ul p {
 	color: #fff;
@@ -127,7 +129,8 @@ a:focus {
 }
 #sidebar ul li a {
 	padding: 10px;
-	font-size: 1.1em;
+	font-size: 1.125rem;
+	font-weight: bold;
 	display: block;
 }
 .rec-container-base__link {
@@ -135,12 +138,8 @@ a:focus {
 }
 li.rec-container-base__link img {
 	border-radius: 50%;
-	margin-right: 50px;
+	margin-right: 10px;
 }
-/* #sidebar ul li a:hover {
-	color: #7386D5;
-	background: #fff;
-} */
 #sidebarCollapse {
 	display: none;
 }
@@ -170,8 +169,8 @@ ul.CTAs a {
 	margin-bottom: 5px;
 }
 a.download {
-	background: #fff;
-	color: #7386D5;
+	background: #34d128;
+	color: #fff;
 }
 
 /* CAN BE REMOVED */
