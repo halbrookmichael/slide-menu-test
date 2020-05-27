@@ -45,7 +45,7 @@ p {
 	display: flex;
 	align-items: center;
 	width: 280px;
-	background-color: #34d128;
+	background-color: #ccc;
 	padding: 10px;
 	margin-bottom: 20px;
 	border-radius: 5px;
@@ -98,6 +98,7 @@ p {
 	height: 35px;
 	line-height: 35px;
 	margin-right: 5px;
+	margin-bottom: 5px;
 	background: transparent;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
@@ -178,10 +179,6 @@ ul.CTAs a {
 	display: block;
 	border-radius: 5px;
 	margin-bottom: 5px;
-}
-a.download {
-	background: #34d128;
-	color: #fff;
 }
 
 /* CAN BE REMOVED */
