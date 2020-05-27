@@ -97,10 +97,7 @@ p {
 	width: 35px;
 	height: 35px;
 	line-height: 35px;
-	align-self: flex-end;
-	text-align: end;
 	margin-right: 5px;
-	/* margin-bottom: 5px; */
 	background: transparent;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
@@ -111,7 +108,11 @@ p {
 	text-align: start;
 	align-self: flex-start;
 	margin-right: 0;
-	/* margin-bottom: 5px; */
+}
+.dismiss-primary {
+	align-self: flex-end;
+text-align: end;
+	margin-right: 0;
 }
 
 /* overlay */
