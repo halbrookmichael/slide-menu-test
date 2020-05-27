@@ -112,8 +112,8 @@ p {
 }
 .dismiss-primary {
 	align-self: flex-end;
-text-align: end;
-	margin-right: 0;
+	text-align: end;
+	margin-right: 5px;
 }
 
 /* overlay */
