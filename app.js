@@ -1,33 +1,43 @@
 $(document).ready(function () {
   $("#sidebar").mCustomScrollbar({
-      theme: "minimal"
+    theme: "minimal"
   });
 
-  $('.dismiss, .overlay').on('click', function () {
-      // hide sidebar
-      $('#sidebar').removeClass('active');
-      // hide overlay
-      $('.overlay').removeClass('active');
-  });
+  $('body').on('click', function(el) {
 
-  $('#sidebarCollapse').on('click', function () {
-      // open sidebar
-      $('#sidebar').addClass('active');
-      // fade in the overlay
-      $('.overlay').addClass('active');
-      $('.collapse.in').toggleClass('in');
-      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-      $('body').addClass('fixed');
-  });
+		if(el.target.getAttribute('class')) {
+			let elClass = el.target.getAttribute('class').toString();
 
-  // When link is clicked update the Html with new content
-  $('.page-submenu').on('click', function () {
-      // update the content
-      $('#secondary-nav').addClass('active');
-  });
-  $('.dismiss-secondary').on('click', function () {
-    // hide sidebar
-    $('#secondary-nav').removeClass('active');
-  });
+			if(elClass.includes('sidebarCollapse'))
+				openMenu();
+			if(elClass.includes('dismiss-primary') || elClass.includes('overlay'))
+				closeMenu();
+			if(elClass.includes('page-submenu'))
+				openSubMenu();
+			if(elClass.includes('dismiss-secondary'))
+				closeSubMenu();
+		}
+		else
+			return;
+  })
 
+  
+	function openMenu() {
+		$('#sidebar').addClass('active');
+		$('.overlay').addClass('active');
+		$('.collapse.in').toggleClass('in');
+		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		$('body').addClass('fixed');
+	}
+	function openSubMenu() {
+		$('#secondary-nav').addClass('active');
+	}
+  function closeMenu() {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
+  }
+  function closeSubMenu() {
+		$('#secondary-nav').removeClass('active');
+  }
 });
