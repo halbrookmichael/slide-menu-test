@@ -100,7 +100,7 @@ p {
 	align-self: flex-end;
 	text-align: end;
 	margin-right: 5px;
-	margin-bottom: 5px;
+	/* margin-bottom: 5px; */
 	background: transparent;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
@@ -111,7 +111,7 @@ p {
 	text-align: start;
 	align-self: flex-start;
 	margin-right: 0;
-	margin-bottom: 5px;
+	/* margin-bottom: 5px; */
 }
 
 /* overlay */
@@ -227,6 +227,7 @@ a.article:hover {
 	width: 320px;
 	opacity: 1;
 	left: 0;
+	top: 0;
 }
 path {
 	pointer-events: none;

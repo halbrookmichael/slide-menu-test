@@ -10,8 +10,12 @@ $(document).ready(function () {
 
 			if(elClass.includes('sidebarCollapse'))
 				openMenu();
-			if(elClass.includes('dismiss-primary') || elClass.includes('overlay'))
+			if(elClass.includes('dismiss-primary'))
 				closeMenu();
+			if(elClass.includes('overlay')) {
+				closeMenu();
+				closeSubMenu();
+			}
 			if(elClass.includes('page-submenu'))
 				openSubMenu();
 			if(elClass.includes('dismiss-secondary'))
