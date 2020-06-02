@@ -6,33 +6,28 @@ $(document).ready(function () {
   $('body').on('click', function(el) {
 
 		if(el.target.getAttribute('class')) {
-			let elClass = el.target.getAttribute('class').toString();
+			let elClass = el.target.getAttribute('class');
 			let elAttr = el.target.getAttribute('data-target');
-			console.log(elAttr)
+			let elParent = el.target.parentElement.parentElement.parentElement.getAttribute('data-target');
 
 			if(elClass.includes('sidebarCollapse'))
 				openMenu();
+			if(elClass.includes('page-submenu'))
+				openSubMenu(elAttr);
 			if(elClass.includes('dismiss-primary'))
 				closeMenu();
+			if(elClass.includes('dismiss-secondary'))
+				closeSubMenu(elParent);
 			if(elClass.includes('overlay')) {
 				closeMenu();
 				closeSubMenu();
 			}
-			if(elClass.includes('page-submenu')) {
-				if(elAttr == 'shop')
-					openSubMenu('shop');
-				if(elAttr == 'help')
-					openSubMenu('help');
-
-			}
-			if(elClass.includes('dismiss-secondary'))
-				closeSubMenu();
 		}
 		else
 			return;
   })
 
-  
+  // Menu functionality
 	function openMenu() {
 		$('#sidebar').addClass('active');
 		$('.overlay').addClass('active');
@@ -47,8 +42,9 @@ $(document).ready(function () {
 		$('#sidebar').removeClass('active');
 		$('.overlay').removeClass('active');
 		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
+		$('body').removeClass('fixed');
   }
-  function closeSubMenu() {
-		$('.sub-menu').removeClass('active');
+  function closeSubMenu(target) {
+		$(`[data-target=${target}]`).removeClass('active');
   }
 });
