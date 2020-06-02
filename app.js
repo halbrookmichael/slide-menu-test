@@ -7,6 +7,8 @@ $(document).ready(function () {
 
 		if(el.target.getAttribute('class')) {
 			let elClass = el.target.getAttribute('class').toString();
+			let elAttr = el.target.getAttribute('data-target');
+			console.log(elAttr)
 
 			if(elClass.includes('sidebarCollapse'))
 				openMenu();
@@ -16,8 +18,13 @@ $(document).ready(function () {
 				closeMenu();
 				closeSubMenu();
 			}
-			if(elClass.includes('page-submenu'))
-				openSubMenu();
+			if(elClass.includes('page-submenu')) {
+				if(elAttr == 'shop')
+					openSubMenu('shop');
+				if(elAttr == 'help')
+					openSubMenu('help');
+
+			}
 			if(elClass.includes('dismiss-secondary'))
 				closeSubMenu();
 		}
@@ -33,8 +40,8 @@ $(document).ready(function () {
 		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
 		$('body').addClass('fixed');
 	}
-	function openSubMenu() {
-		$('#secondary-nav').addClass('active');
+	function openSubMenu(target) {
+		$(`[data-target=${target}]`).addClass('active');
 	}
   function closeMenu() {
 		$('#sidebar').removeClass('active');
@@ -42,6 +49,6 @@ $(document).ready(function () {
 		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
   }
   function closeSubMenu() {
-		$('#secondary-nav').removeClass('active');
+		$('.sub-menu').removeClass('active');
   }
 });

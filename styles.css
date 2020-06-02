@@ -1,8 +1,14 @@
-
+@font-face {
+	font-family: "Din-Regular";
+	src: url("./DIN2014/DIN2014-Regular.ttf");
+}
+@font-face {
+	font-family: "Din-Bold";
+	src: url("./DIN2014/DIN2014-Bold.ttf");
+}
 /* base styles */
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Din-Regular', sans-serif;
 	background: #fafafa;
 }
 p {
@@ -205,7 +211,7 @@ a.article:hover {
 	}
 }
 
-#secondary-nav {
+.sub-menu {
 	position: absolute;
 	flex-direction: column;
 	top: 0;
@@ -221,7 +227,7 @@ a.article:hover {
 	overflow-y: scroll;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
-#secondary-nav.active {
+.sub-menu.active {
 	width: 320px;
 	opacity: 1;
 	left: 0;
