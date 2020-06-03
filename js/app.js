@@ -45,6 +45,12 @@ $(document).ready(function () {
 			text: 'Contact Us',
 			link: '#'
 		},
+		{
+			img: 'img/parentNav/concealed-carry-holsters.jpg',
+			alt: '',
+			text: 'Holster Deals',
+			link: '#'
+		},
 	];
 	const shopNowNav = [
 		{
@@ -280,7 +286,9 @@ $(document).ready(function () {
     theme: "minimal"
 	});
 
-  
+  /**
+	 *  Check which nav, then call population method
+	 */
 	function navToPopulate() {
 		navContainer.forEach(nav => {
 			let navId = nav.getAttribute('id');
@@ -302,6 +310,9 @@ $(document).ready(function () {
 		})
 		
 	}
+	/**
+	 *  Populate each nav
+	 */
 	function populateNav(nav, navUl, linkType) {
 		nav.forEach(link => {
 			if(linkType == 'parent') {
@@ -326,7 +337,7 @@ $(document).ready(function () {
 			}
 		});
 	}
-
+	// Check for clicks on the menu
 	$('body').on('click', function(el) {
 		if(el.target.getAttribute('class')) {
 			let elClass = el.target.getAttribute('class');
@@ -349,7 +360,9 @@ $(document).ready(function () {
 		else
 			return;
 	});
-	// Menu functionality
+	/**
+	 *  Open menu
+	 */
 	function openMenu() {
 		$('#sidebar').addClass('active');
 		$('.overlay').addClass('active');
@@ -357,15 +370,24 @@ $(document).ready(function () {
 		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
 		$('body').addClass('fixed');
 	}
+	/**
+	 *  Open sub menu
+	 */
 	function openSubMenu(target) {
 		$(`[data-target=${target}]`).addClass('active');
 	}
+	/**
+	 *  Close Menu
+	 */
   function closeMenu() {
 		$('#sidebar').removeClass('active');
 		$('.overlay').removeClass('active');
 		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
 		$('body').removeClass('fixed');
-  }
+	}
+	/**
+	 *  Close Sub Menu
+	 */
   function closeSubMenu(target) {
 		$(`[data-target=${target}]`).removeClass('active');
 	}
