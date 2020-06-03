@@ -89,6 +89,10 @@ body {
 #mCSB_1 {
   margin: 0 auto;
 }
+.nav-home-icon {
+	height: 40px;
+	width: 40px;
+}
 
 /* sidebar dismiss */
 .dismiss-base {
