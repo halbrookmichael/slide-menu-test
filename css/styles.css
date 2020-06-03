@@ -85,18 +85,23 @@ body {
 	color: #2c3136;
 	margin: 0;
 }
-.rec-container-base__header {
+.rec-container-base__link-header {
 	height: 50px;
+}
+.rec-container-base__link-header .nav-home-icon {
+	height: 40px;
+	width: 40px;
+	margin-right: 15px;
+}
+.rec-container-base__link-header a {
+	font-size: 1.125rem;
 }
 
 /* custom scrollbar container */
 #mCSB_1 {
   margin: 0 auto;
 }
-.nav-home-icon {
-	height: 40px;
-	width: 40px;
-}
+
 
 /* sidebar dismiss */
 .dismiss-base {
