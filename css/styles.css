@@ -89,12 +89,14 @@ body {
 	height: 50px;
 }
 .rec-container-base__link-header .nav-home-icon {
+	position: absolute;
+	right: 35px;
 	height: 40px;
 	width: 40px;
-	margin-right: 15px;
 }
 .rec-container-base__link-header a {
 	font-size: 1.125rem;
+	margin-left: 15px;
 }
 
 /* custom scrollbar container */
@@ -252,4 +254,5 @@ path {
 }
 .fixed {
 	position: fixed;
+	overflow-y: hidden;
 }
