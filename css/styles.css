@@ -11,7 +11,7 @@
 body {
 	font-family: 'Din-Regular', sans-serif;
 	background: #fafafa;
-	font-size: 1.125rem;
+	font-size: 1rem;
 }
 .rec-container-base {
 	display: flex;
@@ -98,7 +98,12 @@ a[data-toggle="collapse"] {
 .rec-container-base__link-header a {
 	height: 50px;
 	width: 280px;
-	margin-left: 15px;
+	text-transform: uppercase;
+}
+.rec-container-base__link-header a p {
+	margin-left: 12px;
+	margin-top: 5px;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 .head {
@@ -109,7 +114,8 @@ a[data-toggle="collapse"] {
 	border-bottom: 1px solid #e1e1e1;
 }
 .sidebar-header h3 {
-	font-size: 1.125rem;
+	font-size: 1rem;
+	font-weight: bold;
 	text-transform: uppercase;
 	margin-left: 10px;
 }
@@ -120,7 +126,8 @@ a[data-toggle="collapse"] {
 	display: flex;
 	align-items: center;
 	margin-left: 10px;
-	font-size: 1.125rem;
+	font-size: 1rem;
+	font-weight: bold;
 }
 .rec-container-base__link,
 .rec-container-base__link-sub-menu {

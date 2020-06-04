@@ -46,7 +46,7 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			img: 'img/parentNav/concealed-carry-holsters.jpg',
+			img: 'img/parentNav/concealed-carry-deals.png',
 			alt: '',
 			text: 'Holster Deals',
 			link: '#'
