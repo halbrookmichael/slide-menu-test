@@ -19,13 +19,13 @@ $(document).ready(function () {
 			img: 'img/parentNav/concealed-carry-holster-reviews.jpg',
 			alt: '',
 			text: 'Reviews',
-			link: './reviews.html'
+			link: 'reviews.html'
 		},
 		{
 			img: 'img/parentNav/concealed-carry-blog.jpg',
 			alt: '',
 			text: 'Blog',
-			link: './blog.html'
+			link: 'blog.html'
 		},
 		{
 			img: 'img/parentNav/concealed-carry-videos.jpg',
@@ -318,20 +318,24 @@ $(document).ready(function () {
 			if(linkType == 'parent') {
 				$(navUl).append(
 					`<li class="rec-container-base rec-container-base__link">
-						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">${link.text}</a>
-						<div class="img-container">
-							<img src="${link.img}" alt="${link.alt}">
-						</div>
+						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">
+							<div class="img-container">
+								<img src="${link.img}" alt="${link.alt}">
+							</div>
+							${link.text}
+						</a>
 					</li>`
 				)
 			}
 			else {
 				$(navUl).append(
 					`<li class="rec-container-base rec-container-base__link-sub-menu">
-						<div class="img-container">
-							${link.img ? `<img src="${link.img}" alt="${link.alt}">` : '<i class="fas fa-chevron-right"></i>'}
-						</div>
-						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">${link.text}</a>
+						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">
+							<div class="img-container">
+								${link.img ? `<img src="${link.img}" alt="${link.alt}">` : '<i class="fas fa-chevron-right"></i>'}
+							</div>
+							${link.text}
+						</a>
 					</li>`
 				)
 			}
@@ -348,11 +352,9 @@ $(document).ready(function () {
 				openMenu();
 			if(elClass.includes('page-submenu'))
 				openSubMenu(elAttr);
-			if(elClass.includes('dismiss-primary'))
-				closeMenu();
 			if(elClass.includes('dismiss-secondary'))
 				closeSubMenu(elParent);
-			if(elClass.includes('overlay')) {
+			if(elClass.includes('dismiss-all')) {
 				closeMenu();
 				closeSubMenu();
 			}
