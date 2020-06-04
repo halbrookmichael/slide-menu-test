@@ -16,7 +16,7 @@ $(document).ready(function () {
 			extraClass: 'page-submenu'
 		},
 		{
-			img: 'img/parentNav/reviews-temp.jpg',
+			img: 'img/parentNav/concealed-carry-holster-reviews.jpg',
 			alt: '',
 			text: 'Reviews',
 			link: 'reviews.html'
