@@ -60,7 +60,7 @@ body {
 /* sidebar styles */
 #sidebar {
 	width: 320px;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: -320px;
@@ -254,5 +254,4 @@ path {
 }
 .fixed {
 	position: fixed;
-	overflow-y: hidden;
 }
