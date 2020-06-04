@@ -112,7 +112,7 @@ a[data-toggle="collapse"] {
 }
 .rec-container-base__link {
 	position: relative;
-	height: 100px;
+	height: 80px;
 }
 .rec-container-base__link-header {
 	height: 50px;
@@ -121,15 +121,15 @@ a[data-toggle="collapse"] {
 li.rec-container-base__link .img-container {
 	position: absolute;
 	right: 0;
-	max-width: 100px;
-	max-height: 100px;
+	max-width: 80px;
+	max-height: 80px;
 	width: 100%;
 	border-radius: 0;
 }
 li.rec-container-base__link .img-container img {
 	border-radius: 0;
-	height: 100px;
-	width: 100px;
+	height: 100%;
+	width: 100%;
 }
 /* sub menu */
 .sub-menu {
