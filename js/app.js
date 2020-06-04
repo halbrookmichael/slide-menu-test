@@ -16,7 +16,7 @@ $(document).ready(function () {
 			extraClass: 'page-submenu'
 		},
 		{
-			img: 'img/parentNav/concealed-carry-holster-reviews.jpg',
+			img: 'img/parentNav/reviews-temp.jpg',
 			alt: '',
 			text: 'Reviews',
 			link: 'reviews.html'
@@ -66,20 +66,22 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			img: '',
+			img: 'img/iwbNav/alien-gear-iwb-holsters.jpg',
 			alt: 'Placeholder',
 			text: 'Conceal Carry Holsters',
 			link: '#',
 			dataTarget: 'conceal-carry',
-			extraClass: 'page-submenu'
+			extraClass: 'page-submenu',
+			more: true
 		},
 		{
-			img: '',
+			img: 'img/owbNav/alien-gear-owb-holsters.jpg',
 			alt: 'Placeholder',
 			text: 'Open Carry Holsters',
 			link: '#',
 			dataTarget: 'open-carry',
-			extraClass: 'page-submenu'
+			extraClass: 'page-submenu',
+			more: true
 		},
 		{
 			img: 'img/otherNav/alien-gear-rapid-force-glock-17-law-enforcement-holster-mobile-nav.jpg',
@@ -88,7 +90,7 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			img: '',
+			img: 'img/otherNav/alien-gear-tactical-holsters.jpg',
 			alt: 'Placeholder',
 			text: 'Tactical Holsters',
 			link: '#'
@@ -218,7 +220,7 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			img: '',
+			img: 'img/otherNav/alien-gear-pocket-holsters.jpg',
 			alt: 'Placeholder',
 			text: 'Pocket Holsters',
 			link: '#'
@@ -282,9 +284,9 @@ $(document).ready(function () {
 	];
 	navToPopulate();
 
-  $("#sidebar").mCustomScrollbar({
-    theme: "minimal"
-	});
+  // $("#sidebar").mCustomScrollbar({
+  //   theme: "minimal"
+	// });
 
   /**
 	 *  Check which nav, then call population method
@@ -335,6 +337,7 @@ $(document).ready(function () {
 								${link.img ? `<img src="${link.img}" alt="${link.alt}">` : '<i class="fas fa-chevron-right"></i>'}
 							</div>
 							${link.text}
+							${link.more ? `<i class="fas fa-chevron-right"></i>` : ''}
 						</a>
 					</li>`
 				)
