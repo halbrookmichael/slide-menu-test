@@ -355,8 +355,7 @@ $(document).ready(function () {
 			if(elClass.includes('dismiss-secondary'))
 				closeSubMenu(elParent);
 			if(elClass.includes('dismiss-all')) {
-				closeMenu();
-				closeSubMenu();
+				closeAllMenus();
 			}
 		}
 		else
@@ -381,8 +380,10 @@ $(document).ready(function () {
 	/**
 	 *  Close Menu
 	 */
-  function closeMenu() {
-		$('#sidebar').removeClass('active');
+  function closeAllMenus() {
+		navContainer.forEach(nav => {
+			$(nav).removeClass('active');
+		});
 		$('.overlay').removeClass('active');
 		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
 		$('body').removeClass('fixed');

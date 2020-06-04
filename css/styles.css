@@ -57,6 +57,7 @@ a[data-toggle="collapse"] {
 	width: 320px;
 	height: 100%;
 	position: fixed;
+	padding: 20px 0;
 	top: 0;
 	left: -320px;
 	z-index: 999;
@@ -78,9 +79,6 @@ a[data-toggle="collapse"] {
 	text-decoration: none;
 }
 /* sidebar head styles */
-.head {
-	margin-top: 20px;
-}
 .sidebar-header h3 {
 	font-size: 22px;
 	font-weight: bold;
@@ -137,6 +135,7 @@ li.rec-container-base__link .img-container img {
 .sub-menu {
 	position: fixed;
 	flex-direction: column;
+	padding-top: 10px;
 	top: 0;
 	left: 320px;
 	width: 0;
@@ -208,7 +207,8 @@ li.rec-container-base__link-sub-menu .img-container img {
 	pointer-events: none;
 }
 .dismiss-secondary {
-	margin-bottom: 10px;
+	width: 40px;
+	height: 40px;
 }
 .dismiss-secondary svg {
 	margin-bottom: 0px;
