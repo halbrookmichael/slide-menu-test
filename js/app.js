@@ -38,7 +38,10 @@ $(document).ready(function () {
 			img: 'img/parentNav/concealed-carry-help.jpg',
 			alt: '',
 			text: 'Help',
-			link: '#'
+			link: '#',
+			dataTarget: 'help',
+			extraClass: 'page-submenu',
+			more: true
 		},
 		{
 			img: 'img/parentNav/alien-gear-customer-service.jpg',
@@ -319,11 +322,12 @@ $(document).ready(function () {
 				$(navUl).append(
 					`<li class="rec-container-base rec-container-base__link">
 						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">
+							<div class="skew"></div>
+							<p>${link.text}</p>
+							${link.more ? `<i class="fas fa-chevron-right parent"></i>` : ''}
 							<div class="img-container">
 								<img src="${link.img}" alt="${link.alt}">
 							</div>
-							${link.text}
-							${link.more ? `<i class="fas fa-chevron-right parent"></i>` : ''}
 						</a>
 					</li>`
 				)
