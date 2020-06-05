@@ -226,8 +226,8 @@ li.rec-container-base__link-sub-menu .img-container img {
 	height: 50px;
 	background: #000;
 	cursor: pointer;
-	transition: all 0.3s;
 	z-index: 99;
+	transition: all 1s ease;
 }
 .dismiss-all svg {
 	position: absolute;
@@ -238,7 +238,7 @@ li.rec-container-base__link-sub-menu .img-container img {
 	z-index: 99;
 	pointer-events: none;
 }
-.dismiss-all.mobile {
+.dismiss-all-mobile {
 	display: none;
 }
 .dismiss-secondary {
@@ -294,6 +294,15 @@ li.rec-container-base__link-sub-menu .img-container img {
 		right: 17px;
 	}
 }
+@media screen and (max-width: 375px) {
+	#sidebar {
+		width: 320px;
+		left: -320px;
+	}
+	.dismiss-all svg {
+		right: 17px;
+	}
+}
 @media screen and (max-width: 320px) {
 	#sidebar {
 		width: 100%;
@@ -302,15 +311,25 @@ li.rec-container-base__link-sub-menu .img-container img {
 	.head {
 		margin-top: 30px;
 	}
-	.dismiss-all.mobile.active {
+	.dismiss-all {
+		display: none;
+	}
+	.dismiss-all-mobile.active {
 		position: absolute;
-		top: 0;
-		width: 15%;
-		height: 50px;
-		background: #000;
-		cursor: pointer;
-		transition: all 0.3s;
-		z-index: 1005;
 		display: block;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		margin: 0 auto;
+		text-align: center;
+		pointer-events: auto;
+		z-index: 1;
+	}
+	.dismiss-all-mobile.active svg {
+		color: #000;
+		font-size: 24px;
+		margin-top: 20px;
+		pointer-events: none;
 	}
 }
