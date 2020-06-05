@@ -107,7 +107,10 @@ a[data-toggle="collapse"] {
 	text-transform: uppercase;
 }
 .head {
-	padding: 0 20px;
+	align-self: center;
+}
+.sub-head {
+	width: 280px;
 }
 .sidebar-header {
 	margin-bottom: 15px;
@@ -219,7 +222,7 @@ li.rec-container-base__link-sub-menu .img-container img {
 .dismiss-all {
 	position: absolute;
 	right: 0px;
-	width: 15%;
+	width: 100%;
 	height: 50px;
 	background: #000;
 	cursor: pointer;
@@ -282,10 +285,26 @@ li.rec-container-base__link-sub-menu .img-container img {
 		display: block;
 	}
 }
+@media screen and (max-width: 425px) {
+	#sidebar {
+		width: 375px;
+		left: -375px;
+	}
+	.dismiss-all svg {
+		right: 17px;
+	}
+}
 @media screen and (max-width: 320px) {
+	#sidebar {
+		width: 100%;
+		left: -320px;
+	}
+	.head {
+		margin-top: 30px;
+	}
 	.dismiss-all.mobile.active {
 		position: absolute;
-		right: 0px;
+		top: 0;
 		width: 15%;
 		height: 50px;
 		background: #000;

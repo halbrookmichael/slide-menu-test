@@ -284,10 +284,6 @@ $(document).ready(function () {
 	];
 	navToPopulate();
 
-  // $("#sidebar").mCustomScrollbar({
-  //   theme: "minimal"
-	// });
-
   /**
 	 *  Check which nav, then call population method
 	 */
@@ -344,6 +340,15 @@ $(document).ready(function () {
 			}
 		});
 	}
+	// Show hide close at 320px
+	$(window).on('resize', function() {
+		let width = $(window).width();
+
+		if(width <= 320 && $('#sidebar').hasClass('active'))
+			$('.dismiss-all mobile').addClass('active');
+		else
+			$('.dismiss-all mobile').removeClass('active');
+	});
 	// Check for clicks on the menu
 	$('body').on('click', function(el) {
 		if(el.target.getAttribute('class')) {
