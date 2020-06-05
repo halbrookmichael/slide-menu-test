@@ -343,11 +343,13 @@ $(document).ready(function () {
 	// Check for clicks on the menu
 	$('body').on('click', function(el) {
 		let width = $(window).width();
-
+		console.log(el.target.getAttribute('class'))
 		if(el.target.getAttribute('class')) {
 			let elClass = el.target.getAttribute('class');
 			let elAttr = el.target.getAttribute('data-target');
 			let elParent = el.target.parentElement.parentElement.parentElement.getAttribute('data-target');
+
+			
 
 			if(elClass.includes('sidebarCollapse'))
 				openMenu();
@@ -355,7 +357,7 @@ $(document).ready(function () {
 				openSubMenu(elAttr);
 			if(elClass.includes('dismiss-secondary'))
 				closeSubMenu(elParent);
-			if(elClass.includes('dismiss-all')) {
+			if(elClass.includes('dismiss-all') || elClass.includes('overlay')) {
 				closeAllMenus();
 			}
 		}
