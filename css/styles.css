@@ -162,6 +162,10 @@ li.rec-container-base__link .img-container img {
 	height: 100%;
 	width: 100%;
 }
+.rec-container-base__link .parent {
+	position: absolute;
+	left: 120px;
+}
 /* sub menu */
 .sub-menu {
 	position: fixed;

@@ -13,7 +13,8 @@ $(document).ready(function () {
 			text: 'Shop Now',
 			link: '#',
 			dataTarget: 'shop',
-			extraClass: 'page-submenu'
+			extraClass: 'page-submenu',
+			more: true
 		},
 		{
 			img: 'img/parentNav/concealed-carry-holster-reviews.jpg',
@@ -290,6 +291,7 @@ $(document).ready(function () {
 	function navToPopulate() {
 		navContainer.forEach(nav => {
 			let navId = nav.getAttribute('id');
+
 			if(navId == 'sidebar') {
 				populateNav(parentNav, '.components-parent', 'parent')
 			}
@@ -321,6 +323,7 @@ $(document).ready(function () {
 								<img src="${link.img}" alt="${link.alt}">
 							</div>
 							${link.text}
+							${link.more ? `<i class="fas fa-chevron-right parent"></i>` : ''}
 						</a>
 					</li>`
 				)
@@ -343,7 +346,7 @@ $(document).ready(function () {
 	// Check for clicks on the menu
 	$('body').on('click', function(el) {
 		let width = $(window).width();
-		console.log(el.target.getAttribute('class'))
+
 		if(el.target.getAttribute('class')) {
 			let elClass = el.target.getAttribute('class');
 			let elAttr = el.target.getAttribute('data-target');
