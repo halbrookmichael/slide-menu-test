@@ -323,7 +323,7 @@ $(document).ready(function () {
 					`<li class="rec-container-base rec-container-base__link">
 						<a href="${link.link}" class="${link.extraClass ? link.extraClass : ''}" data-target="${link.dataTarget ? link.dataTarget : ''}">
 							<div class="skew"></div>
-							<p>${link.text}</p>
+							${link.text}
 							${link.more ? `<i class="fas fa-chevron-right parent"></i>` : ''}
 							<div class="img-container">
 								<img src="${link.img}" alt="${link.alt}">
@@ -401,6 +401,7 @@ $(document).ready(function () {
 			$(nav).removeClass('active');
 		});
 		$('.overlay').removeClass('active');
+		$('.dismiss-all').removeClass('active');
 		$('a[aria-expanded=false]').attr('aria-expanded', 'true');
 		$('body').removeClass('fixed');
 	}
