@@ -280,7 +280,7 @@ li.rec-container-base__link-sub-menu .img-container img {
 	margin: 40px 0;
 }
 /* media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
 	#sidebarCollapse {
 		display: block;
 	}
