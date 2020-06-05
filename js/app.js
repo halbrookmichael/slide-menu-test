@@ -156,50 +156,34 @@ $(document).ready(function () {
 	];
 	const helpNav = [
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'About Us',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Warranty',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Returns and Exchanges',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Product Testing',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Product FAQ',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Internation FAQ',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Shapeshift Release Calendar',
 			link: '#'
 		},
 		{
-			img: 'https://placekeanu.com/40/40',
-			alt: 'Placeholder',
 			text: 'Contest',
 			link: '#'
 		},
@@ -302,7 +286,7 @@ $(document).ready(function () {
 				populateNav(shopNowNav, '.components-shop', 'sub')
 			}
 			if(navId == 'help-nav') {
-				populateNav(helpNav, '.components-help', 'sub')
+				populateNav(helpNav, '.components-help', 'help')
 			}
 			if(navId == 'conceal-carry-nav') {
 				populateNav(concealCarryNav, '.components-conceal-carry', 'sub')
@@ -328,6 +312,16 @@ $(document).ready(function () {
 							<div class="img-container">
 								<img src="${link.img}" alt="${link.alt}">
 							</div>
+						</a>
+					</li>`
+				)
+			}
+			else if(linkType == 'help') {
+				$(navUl).append(
+					`<li class="rec-container-base rec-container-base__link-sub-menu">
+						<a href="${link.link}" class="link-no-image" data-target="${link.dataTarget ? link.dataTarget : ''}">
+							${link.text}
+							${link.more ? `<i class="fas fa-chevron-right parent"></i>` : ''}
 						</a>
 					</li>`
 				)
