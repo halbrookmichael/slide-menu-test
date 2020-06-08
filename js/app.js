@@ -296,22 +296,6 @@ $(document).ready(function () {
 					populateNav(openCarryNav, '.components-open-carry', 'sub');
 					break;
 			}
-
-			// if(navId == 'sidebar') {
-				
-			// }
-			// if(navId == 'shop-nav') {
-			
-			// }
-			// if(navId == 'help-nav') {
-			
-			// }
-			// if(navId == 'conceal-carry-nav') {
-				
-			// }
-			// if(navId == 'open-carry-nav') {
-				
-			// }
 		})
 		
 	}
