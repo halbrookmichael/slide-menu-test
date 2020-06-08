@@ -106,11 +106,16 @@ a[data-toggle="collapse"] {
 	width: 280px;
 	text-transform: uppercase;
 }
-.rec-container-base__link-header a p {
+.rec-container-base__link-header a span {
 	margin-left: 20px;
-	margin-top: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.rec-container-base__link-header img {
+	position: absolute;
+	right: 22px;
+	height: 40px;
+	width: 40px;
 }
 .head {
 	align-self: center;
