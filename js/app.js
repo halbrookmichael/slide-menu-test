@@ -350,9 +350,7 @@ $(document).ready(function () {
 		if(el.target.getAttribute('class')) {
 			let elClass = el.target.getAttribute('class');
 			let elAttr = el.target.getAttribute('data-target');
-			let elParent = el.target.parentElement.parentElement.parentElement.getAttribute('data-target');
-
-			
+			let elParent = el.target.parentElement.parentElement.getAttribute('data-target');
 
 			if(elClass.includes('sidebarCollapse'))
 				openMenu();
