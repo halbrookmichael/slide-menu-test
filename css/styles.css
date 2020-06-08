@@ -99,13 +99,16 @@ a[data-toggle="collapse"] {
 	position: relative;
 }
 .rec-container-base__link-header a {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 50px;
 	width: 280px;
 	text-transform: uppercase;
 }
 .rec-container-base__link-header a p {
-	margin-left: 12px;
-	margin-top: 5px;
+	margin-left: 20px;
+	margin-top: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -136,7 +139,7 @@ a[data-toggle="collapse"] {
 	overflow: hidden;
 }
 .rec-container-base__link a {
-	height: 60px;
+	height: 80px;
 	width: 280px;
 	display: flex;
 	align-items: center;
@@ -369,3 +372,11 @@ li.rec-container-base__link-sub-menu .img-container img {
 		margin-bottom: 5px;
 	}
 }
+
+
+/* images */
+/* #home {
+  width: 43px;
+  height: 44px;
+  background: url(../img/mobile-menu-sprite-sheet.png) 0 0;
+} */

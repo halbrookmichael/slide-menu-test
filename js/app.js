@@ -50,7 +50,7 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			img: 'img/parentNav/concealed-carry-deals.png',
+			img: 'img/parentNav/concealed-carry-deals.jpg',
 			alt: '',
 			text: 'Holster Deals',
 			link: '#'
@@ -301,6 +301,9 @@ $(document).ready(function () {
 	}
 	/**
 	 *  Populate each nav
+	 *  @param {array} nav
+	 *  @param {string} navUl
+	 *  @param {string} linkType
 	 */
 	function populateNav(nav, navUl, linkType) {
 		nav.forEach(link => {
@@ -383,6 +386,7 @@ $(document).ready(function () {
 	}
 	/**
 	 *  Open sub menu
+	 *  @param {element} target
 	 */
 	function openSubMenu(target) {
 		$(`[data-target=${target}]`).addClass('active');
@@ -401,6 +405,7 @@ $(document).ready(function () {
 	}
 	/**
 	 *  Close Sub Menu
+	 *  @param {element} target
 	 */
   function closeSubMenu(target) {
 		$(`[data-target=${target}]`).removeClass('active');
