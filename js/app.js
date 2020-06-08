@@ -279,21 +279,39 @@ $(document).ready(function () {
 		navContainer.forEach(nav => {
 			let navId = nav.getAttribute('id');
 
-			if(navId == 'sidebar') {
-				populateNav(parentNav, '.components-parent', 'parent')
+			switch(navId) {
+				case 'sidebar': 
+					populateNav(parentNav, '.components-parent', 'parent');
+					break;
+				case 'shop-nav': 
+					populateNav(shopNowNav, '.components-shop', 'sub');
+					break;
+				case 'help-nav': 
+					populateNav(helpNav, '.components-help', 'help');
+					break;
+				case 'conceal-carry-nav': 
+					populateNav(concealCarryNav, '.components-conceal-carry', 'sub');
+					break;
+				case 'open-carry-nav': 
+					populateNav(openCarryNav, '.components-open-carry', 'sub');
+					break;
 			}
-			if(navId == 'shop-nav') {
-				populateNav(shopNowNav, '.components-shop', 'sub')
-			}
-			if(navId == 'help-nav') {
-				populateNav(helpNav, '.components-help', 'help')
-			}
-			if(navId == 'conceal-carry-nav') {
-				populateNav(concealCarryNav, '.components-conceal-carry', 'sub')
-			}
-			if(navId == 'open-carry-nav') {
-				populateNav(openCarryNav, '.components-open-carry', 'sub')
-			}
+
+			// if(navId == 'sidebar') {
+				
+			// }
+			// if(navId == 'shop-nav') {
+			
+			// }
+			// if(navId == 'help-nav') {
+			
+			// }
+			// if(navId == 'conceal-carry-nav') {
+				
+			// }
+			// if(navId == 'open-carry-nav') {
+				
+			// }
 		})
 		
 	}
