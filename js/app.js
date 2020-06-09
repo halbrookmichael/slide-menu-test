@@ -349,9 +349,9 @@ $(document).ready(function () {
 	// Check for clicks on the menu
 	$('body').on('click', function(el) {
 		let width = $(window).width();
+		let elClass = el.target.getAttribute('class');
 
-		if(el.target.getAttribute('class')) {
-			let elClass = el.target.getAttribute('class');
+		if(elClass) {
 			let elAttr = el.target.getAttribute('data-target');
 			let elParent = el.target.parentElement.parentElement.getAttribute('data-target');
 
@@ -410,8 +410,4 @@ $(document).ready(function () {
   function closeSubMenu(target) {
 		$(`[data-target=${target}]`).removeClass('active');
 	}
-
-
-	// Mega menu test
-
 });
