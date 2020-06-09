@@ -176,7 +176,7 @@ $(document).ready(function () {
 			link: '#'
 		},
 		{
-			text: 'Internation FAQ',
+			text: 'International FAQ',
 			link: '#'
 		},
 		{
@@ -242,7 +242,7 @@ $(document).ready(function () {
 		{
 			img: 'img/owbNav/wearing-a-molle-holster-on-the-waistline-mobile-nav.jpg',
 			alt: 'Placeholder',
-			text: 'Mobile Holsters',
+			text: 'MOLLE Holsters',
 			link: '#'
 		},
 		{
@@ -410,4 +410,8 @@ $(document).ready(function () {
   function closeSubMenu(target) {
 		$(`[data-target=${target}]`).removeClass('active');
 	}
+
+
+	// Mega menu test
+
 });
