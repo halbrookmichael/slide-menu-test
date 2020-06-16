@@ -325,6 +325,16 @@ li.rec-container-base__link-sub-menu .img-container img {
 	}
 }
 @media screen and (max-width: 425px) {
+	#sidebar {
+		width: 345px;
+		left: -345px;
+	}
+	.sub-menu {
+		left:345px;
+	}
+	.sub-menu.active {
+		width: 345px;
+	}
 	.dismiss-all svg {
 		right: 17px;
 	}
